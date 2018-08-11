@@ -16,14 +16,12 @@ public class enemyGenerator : MonoBehaviour {
 
     void CreateEnemy () {
         nextEnemyPosition.y += 7f;
-        Instantiate(enemies[Random.Range(0, 4)], nextEnemyPosition, Quaternion.identity);
+        Instantiate(enemies[Random.Range(0, 2)], nextEnemyPosition, Quaternion.identity);
     }
 
     void Update()
     {
         if (nextEnemyPosition.y - 10f < cameraAnchor.rb.position.y)
-        {
             CreateEnemy();
-        }
     }
 }
