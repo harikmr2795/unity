@@ -9,17 +9,4 @@ public class cameraAnchor : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    void Update () {
-        //if (player.gameStarted && !player.gameOver)
-        //{
-        //    rb.velocity = Vector2.up * cameraSpeed;
-        //}
-
-        //if (player.gameOver)
-        //{
-        //    rb.velocity = Vector2.up * 0;
-        //}
-
-    }
 }
