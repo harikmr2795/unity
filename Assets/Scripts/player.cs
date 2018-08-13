@@ -20,25 +20,26 @@ public class player : MonoBehaviour
         {
             gameStarted = true;
             if(!gameOver)
-                cameraAnchor.rb.velocity = Vector2.up * cameraAnchor.cameraSpeed;
+                cameraAnchor.cameraRb.velocity = Vector2.up * cameraAnchor.cameraSpeed;
         }
 
         if (Input.GetMouseButtonUp(0))
         {
             gameOver = true;
-            cameraAnchor.rb.velocity = Vector2.up * 0;
+            cameraAnchor.cameraRb.velocity = Vector2.up * 0;
             Debug.Log("Game Over");
         }
 
         if (gameStarted && !gameOver)
-            rb.position = cam.ScreenToWorldPoint(Input.mousePosition);
+            rb.MovePosition(cam.ScreenToWorldPoint(Input.mousePosition));
+            //rb.position = cam.ScreenToWorldPoint(Input.mousePosition);
 
     }
 
     void OnTriggerEnter2D()
     {
         gameOver = true;
-        cameraAnchor.rb.velocity = Vector2.up * 0;
+        cameraAnchor.cameraRb.velocity = Vector2.up * 0;
         Debug.Log("Game Over");
     }
 }

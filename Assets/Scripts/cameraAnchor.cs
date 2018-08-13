@@ -3,10 +3,10 @@
 public class cameraAnchor : MonoBehaviour {
 
     public static float cameraSpeed = 3f;
-    public static Rigidbody2D rb;
+    public static Rigidbody2D cameraRb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        cameraRb = GetComponent<Rigidbody2D>();
     }
 }
