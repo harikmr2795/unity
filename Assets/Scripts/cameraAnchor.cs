@@ -9,4 +9,5 @@ public class cameraAnchor : MonoBehaviour {
     {
         cameraRb = GetComponent<Rigidbody2D>();
     }
+
 }

@@ -10,6 +10,5 @@ public class rotate : MonoBehaviour {
 	void Update () {
         if (player.gameStarted && !player.gameOver)
             rb.MoveRotation(rb.rotation + speed * Time.deltaTime);
-            //transform.Rotate(0f, 0f, speed * Time.deltaTime);
 	}
 }
