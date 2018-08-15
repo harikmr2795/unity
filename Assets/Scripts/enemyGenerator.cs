@@ -9,14 +9,15 @@ public class enemyGenerator : MonoBehaviour {
 
 	void Start () {
         nextEnemyPosition = transform.position;
+        nextEnemyPosition.y += 4f;
         CreateEnemy();
         CreateEnemy();
         CreateEnemy();
     }
 
     void CreateEnemy () {
-        nextEnemyPosition.y += 7f;
         Instantiate(enemies[Random.Range(0, 3)], nextEnemyPosition, Quaternion.identity);
+        nextEnemyPosition.y += 7f;
     }
 
     void Update()

@@ -42,6 +42,6 @@ public class player : MonoBehaviour
         gameOver = true;
         cameraAnchor.cameraRb.velocity = Vector2.up * 0;
         Debug.Log("Game Over");
-        CameraShake.Shake(0.2f,0.2f);
+        CameraShake.Shake(0.25f,0.25f);
     }
 }

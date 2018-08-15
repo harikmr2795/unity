@@ -2,7 +2,7 @@
 
 public class cameraAnchor : MonoBehaviour {
 
-    public static float cameraSpeed = 3f;
+    public static float cameraSpeed = 5f;
     public static Rigidbody2D cameraRb;
 
     void Start()

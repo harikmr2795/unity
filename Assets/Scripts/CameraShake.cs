@@ -3,14 +3,11 @@ using System.Collections;
 
 public class CameraShake : MonoBehaviour
 {
-
     private Vector3 _originalPos;
     public static CameraShake _instance;
 
     void Awake()
     {
-        //_originalPos = transform.localPosition;
-
         _instance = this;
     }
 
@@ -23,15 +20,12 @@ public class CameraShake : MonoBehaviour
     public IEnumerator cShake(float duration, float amount)
     {
         float endTime = Time.time + duration;
-
         _originalPos = transform.localPosition;
 
         while (Time.time < endTime)
         {
             transform.localPosition = _originalPos + Random.insideUnitSphere * amount;
-
             duration -= Time.deltaTime;
-
             yield return null;
         }
 
