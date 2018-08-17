@@ -13,16 +13,12 @@ public class player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !gameOver)
         {
-            if (!gameOver)
-            {
-                gameStarted = true;
-                cameraAnchor.cameraRb.velocity = Vector2.up * cameraAnchor.cameraSpeed;
-            }       
+            gameStarted = true;
+            cameraAnchor.cameraRb.velocity = Vector2.up * cameraAnchor.cameraSpeed;
         }
 
         if (Input.GetMouseButtonUp(0) && !gameOver)
@@ -41,7 +37,6 @@ public class player : MonoBehaviour
     {
         gameOver = true;
         cameraAnchor.cameraRb.velocity = Vector2.up * 0;
-        Debug.Log("Game Over");
         CameraShake.Shake(0.25f,0.25f);
     }
 }

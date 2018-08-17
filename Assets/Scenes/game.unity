@@ -340,7 +340,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
@@ -358,21 +357,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
---- !u!114 &519420030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: d91ac91800140a7478408d3fb6d42528, type: 2}
-  m_Camera: {fileID: 0}
-  m_PreviousProfile: {fileID: 0}
-  m_RenderingInSceneView: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -478,8 +462,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gradient:
     serializedVersion: 2
-    key0: {r: 0.010698246, g: 0, b: 0.5188679, a: 1}
-    key1: {r: 0.010415168, g: 0, b: 0.4339623, a: 1}
+    key0: {r: 0.0067777317, g: 0, b: 0.3490566, a: 1}
+    key1: {r: 0.0067385193, g: 0, b: 0.28627452, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -502,7 +486,7 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
+    m_Mode: 1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   GradientType: 2
@@ -651,7 +635,7 @@ TrailRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 909a698199f4a20448c56d34150e27a3, type: 2}
+  - {fileID: 2100000, guid: d90cc5fd10c767a45ba13c66c55b253c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

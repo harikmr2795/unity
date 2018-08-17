@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50964856209979932}
-  speed: -180
+  speed: -100
 --- !u!120 &120955580235417814
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -150,7 +150,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: aae8330f72e44f940acf43f90fe5cc9a, type: 2}
+  - {fileID: 2100000, guid: 63fcf5d4decbeed499c641697965f8a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
