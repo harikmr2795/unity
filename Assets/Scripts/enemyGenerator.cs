@@ -6,24 +6,33 @@ public class enemyGenerator : MonoBehaviour {
 
     public GameObject[] enemies;
     public Vector3 nextEnemyPosition;
+    public GameObject lastCreatedObject;
+    public List<GameObject> allCreatedObjects;
 
-	void Start () {
+    void Start () {
+        allCreatedObjects = new List<GameObject>();
         nextEnemyPosition = transform.position;
         nextEnemyPosition.y += 4f;
-        CreateEnemy();
-        CreateEnemy();
-        CreateEnemy();
+        CreateEnemy(false);
+        CreateEnemy(false);
+        CreateEnemy(false);
+        CreateEnemy(false);
     }
 
-    void CreateEnemy () {
-        var id = Instantiate(enemies[Random.Range(0, 3)], nextEnemyPosition, Quaternion.identity);
-        Destroy(id, 5);
+    void CreateEnemy (bool destroy) { //destroys an old object if passed value true
+        lastCreatedObject = Instantiate(enemies[Random.Range(0, 3)], nextEnemyPosition, Quaternion.identity);
+        allCreatedObjects.Add(lastCreatedObject);
+        if (destroy)
+        {
+            Destroy(allCreatedObjects[0], 0);
+            allCreatedObjects.RemoveAt(0);
+        }
         nextEnemyPosition.y += 7f;
     }
 
     void FixedUpdate()
     {
-        if (nextEnemyPosition.y - 10f < cameraAnchor.cameraRb.position.y)
-            CreateEnemy();
+        if (nextEnemyPosition.y - 15f < cameraAnchor.cameraRb.position.y)
+            CreateEnemy(true);
     }
 }

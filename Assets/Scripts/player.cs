@@ -9,6 +9,8 @@ public class player : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0;
         cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
     }
